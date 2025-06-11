@@ -69,7 +69,7 @@ const Login = () => {
       return;
     }
     try {
-      const res = await axios.post('http://localhost:9000/api/auth/login', {
+      const res = await axios.post('https://codingplatform-backend.onrender.com/api/auth/login', {
         email: formData.email,
         password: formData.password
       });
