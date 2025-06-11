@@ -52,7 +52,7 @@ const Profile = () => {
     const fetchProfileData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:9000/api/problems/summary');
+        const response = await axios.get('https://codingplatform-backend.onrender.com/api/problems/summary');
         setProfileData(response.data);
         setError('');
       } catch (err) {
