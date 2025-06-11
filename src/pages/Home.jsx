@@ -117,7 +117,7 @@ const Home = () => {
   const fetchQuestions = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:9000/api/problems/questions');
+      const response = await axios.get('https://codingplatform-backend.onrender.com/api/problems/questions');
       setQuestions(response.data);
       setError('');
     } catch (err) {
@@ -164,7 +164,7 @@ const Home = () => {
       );
 
       // Make API call to update progress
-      const response = await axios.put('http://localhost:9000/api/problems/update', {
+      const response = await axios.put('https://codingplatform-backend.onrender.com/api/problems/update', {
         topicId,
         problemId,
         completed: newCompletedState  // This will be true when checking, false when unchecking
