@@ -64,7 +64,7 @@ const Register = () => {
     }
     try {
       const res = await axios.post('https://codingplatform-backend.onrender.com/api/auth/register', {
-        name: formData.name,
+        fullName: formData.name,
         email: formData.email,
         password: formData.password
       });
